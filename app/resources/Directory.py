@@ -13,9 +13,9 @@ class GETDir(Resource):
         directory = []
 
         try:
-            filenames = os.listdir(f'/home/pi/ShareDir/{content}')
+            filenames = os.listdir(f'/media/pi/METAFIGURE/{content}')
             for filename in filenames:
-                if os.path.isfile(f'/home/pi/ShareDir/{content}/{filename}'):
+                if os.path.isfile(f'/media/pi/METAFIGURE/{content}/{filename}'):
                     files.append(filename)
                 else:
                     directory.append(filename)
@@ -35,9 +35,9 @@ class GETRoot(Resource):
         files = []
         directory = []
         try:
-            filenames = os.listdir('/home/pi/ShareDir')
+            filenames = os.listdir('/media/pi/METAFIGURE/')
             for filename in filenames:
-                if os.path.isfile(f'/home/pi/ShareDir/{filename}'):
+                if os.path.isfile(f'/media/pi/METAFIGURE/{filename}'):
                     files.append(filename)
                 else:
                     directory.append(filename)
